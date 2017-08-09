@@ -1,2 +1,4 @@
-export { postsReducer } from './posts.reducer';
-export { postsActions } from './posts.actions';
+import postsReducer from './posts.reducer';
+import * as postsActions from './posts.actions';
+
+export { postsReducer, postsActions };

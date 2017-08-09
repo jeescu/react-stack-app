@@ -3,7 +3,7 @@ import {
   ADD_POST_SUCCESS,
 } from './posts.actions';
 
-export default function (state = initialState.auth, action = null) {
+export default function (state = initialState.posts, action = null) {
   switch (action.type) {
     case ADD_POST_SUCCESS:
       return [
