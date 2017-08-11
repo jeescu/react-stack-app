@@ -1,4 +1,49 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f3f3f3
+}
+
+label {
+  font-weight: inherit;
+}
+
+.top-buffer {
+  margin-top: 20px;
+}
+
+.navigation {
+  font-size: 18px; 
+  font-weight: lighter;
+  color: #757575;
+  padding-bottom: 15px;
+  display: block; 
+}
+
+.title {
+  font-size: 24px;
+  font-weight: light;
+  margin-bottom: 20px;
+}
+
+.paper {
+  padding: 30px;
+}
+
+.floating-action-button {
+  margin: 0;
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: fixed;
+}
+
+.login-button {
+  float: right;
+}
+
+.login-view {
+  padding: 20px;
+  overflow: auto;
 }

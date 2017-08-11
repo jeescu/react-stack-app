@@ -1,18 +1,23 @@
 import React from 'react';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { IndexRoute, Route, Router, browserHistory } from 'react-router';
 
-import Home from '../views/Home/Home';
-import Posts from '../views/Posts/Posts';
-import Post from '../views/Post/Post';
+import FormPage from '../views/Pages/FormPage';
+import LoginPage from '../views/Pages/LoginPage';
+import DashboardPage from '../views/Pages/DashboardPage';
+import TablePage from '../views/Pages/TablePage';
+import NotFoundPage from '../views/Pages/NotFoundPage';
+
+import Dashboard from '../views/Layouts/Dashboard';
 
 export default () => (
-  <Router>
-    <div>
-      <Route exact path="/" component={Home}>
-        {/* <IndexRoute component={Posts} />  */}
-      </Route>
-      <Route path="/post" component={Posts} />
-      <Route path="/post/:id" component={Post} />
-    </div>
+  <Router history={browserHistory}>
+    <Route path="/" component={Dashboard}>
+      <IndexRoute component={DashboardPage} />
+      <Route path="/dashboard" component={DashboardPage} />
+      <Route path="/table" component={TablePage} />
+      <Route path="/form" component={FormPage} />
+    </Route>
+    <Route path="/login" component={LoginPage} />    
+    <Route path="*" component={NotFoundPage} />
   </Router>
 );
