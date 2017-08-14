@@ -13,6 +13,7 @@ export default () => (
   <Router history={browserHistory}>
     <Route path="/" component={Dashboard}>
       <IndexRoute component={DashboardPage} />
+      <Route path="/react-stack-app" component={DashboardPage} />
       <Route path="/dashboard" component={DashboardPage} />
       <Route path="/table" component={TablePage} />
       <Route path="/form" component={FormPage} />
