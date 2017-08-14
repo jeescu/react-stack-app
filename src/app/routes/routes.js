@@ -9,16 +9,18 @@ import NotFoundPage from '../views/Pages/NotFoundPage';
 
 import Dashboard from '../views/Layouts/Dashboard';
 
-export default () => (
+/* eslint-disable react/prop-types */
+export default ({ requireAuth }) => (
   <Router history={browserHistory}>
-    <Route path="/" component={Dashboard}>
+    <Route path="/" component={Dashboard} onEnter={requireAuth}>
       <IndexRoute component={DashboardPage} />
+      <Route path="/react-stack-app" component={DashboardPage} />
       <Route path="/react-stack-app" component={DashboardPage} />
       <Route path="/dashboard" component={DashboardPage} />
       <Route path="/table" component={TablePage} />
       <Route path="/form" component={FormPage} />
     </Route>
-    <Route path="/login" component={LoginPage} />    
-    <Route path="*" component={NotFoundPage} />
+    <Route path="/login" component={LoginPage} />
+    <Route path="/*" component={NotFoundPage} />
   </Router>
 );

@@ -1,4 +1,9 @@
 export default {
+  auth: {
+    isAuthenticated: false,
+    currentUser: null,
+    isLoading: false,
+  },
   posts: [
     {
       id: '1',
