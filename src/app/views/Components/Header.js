@@ -1,4 +1,5 @@
 import React from 'react';
+import { compose, getContext, withProps } from 'recompose';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import AppBar from 'material-ui/AppBar';
@@ -11,7 +12,14 @@ import ViewModule from 'material-ui/svg-icons/action/view-module';
 import { white } from 'material-ui/styles/colors';
 import SearchBox from './SearchBox';
 
-const Header = ({ styles, handleChangeRequestNavDrawer }) => {
+import { authActions } from '../../states/auth';
+
+const enhance = compose(
+  getContext({ store: PropTypes.object }),
+  withProps(({ store }) => ({ dispatch: store.dispatch })),
+);
+
+const Header = ({ styles, handleChangeRequestNavDrawer, dispatch }) => {
   const style = {
     appBar: {
       position: 'fixed',
@@ -60,7 +68,7 @@ const Header = ({ styles, handleChangeRequestNavDrawer }) => {
               targetOrigin={{ horizontal: 'right', vertical: 'top' }}
               anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
             >
-              <MenuItem primaryText="Sign out" containerElement={<Link to="/login" />} />
+              <MenuItem primaryText="Sign out" onClick={() => dispatch(authActions.logoutRequest())} />
             </IconMenu>
           </div>
         }
@@ -72,6 +80,7 @@ const Header = ({ styles, handleChangeRequestNavDrawer }) => {
 Header.propTypes = {
   styles: PropTypes.object.isRequired,
   handleChangeRequestNavDrawer: PropTypes.func.isRequired,
+  dispatch: PropTypes.func.isRequired,
 };
 
-export default Header;
+export default enhance(Header);

@@ -3,6 +3,7 @@ import {
   LOGIN_REQUEST,
   LOGIN_SUCCESS,
   LOGIN_FAILURE,
+  LOGOUT_SUCCESS,
 } from './auth.actions';
 
 export default function (state = initialState.auth, action = null) {
@@ -21,6 +22,13 @@ export default function (state = initialState.auth, action = null) {
       };
 
     case LOGIN_FAILURE:
+      return {
+        isAuthenticated: false,
+        currentUser: null,
+        isLoading: false,
+      };
+
+    case LOGOUT_SUCCESS:
       return {
         isAuthenticated: false,
         currentUser: null,
