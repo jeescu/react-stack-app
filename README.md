@@ -11,7 +11,7 @@ Layouts are inspired from [rafael's](https://github.com/rafaelhz) [admin templat
 __NOTE:__
 - The **API** is just simulated (faked).
 - Use credential, username: `user` password: `abc123`.
-- (External) Github Page has issues when navigating to some routes except for the specified homepage ([/react-stack-app/](https://jeescu.github.io/react-stack-app/)).
+- (External) Github Page has issues when reloading to some routes except for the specified homepage url ([/react-stack-app/](https://jeescu.github.io/react-stack-app/)).
 
 ### React libraries
 - [Redux](https://github.com/reactjs/redux/)
