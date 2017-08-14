@@ -19,7 +19,8 @@
     "recompose": "^0.24.0",
     "redux": "^3.7.2",
     "redux-saga": "^0.15.6",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "store": "^2.0.12"
   },
   "scripts": {
     "start": "npm run lint && react-scripts start app",
