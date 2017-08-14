@@ -6,6 +6,7 @@ See [DEMO](https://jeescu.github.io/react-stack-app/)
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ![alt Screenshot](https://raw.githubusercontent.com/jeescu/react-stack-app/master/public/rsa-sc.png)
+Layouts are inspired from [rafael's](https://github.com/rafaelhz) [admin template](https://github.com/rafaelhz/react-material-admin-template). Star it!
 
 __NOTE:__
 - The **API** is just simulated (faked).
