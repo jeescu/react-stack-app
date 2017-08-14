@@ -2,6 +2,7 @@
   "name": "react-stack-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jeescu.github.io/react-stack-app",
   "dependencies": {
     "classnames": "^2.2.5",
     "material-ui": "^0.18.7",
@@ -26,7 +27,9 @@
     "lint": "esw src",
     "lint:watch": "npm run lint -- --watch",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "enzyme": "^2.9.1",
@@ -35,6 +38,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-react": "^7.1.0",
     "eslint-watch": "^3.1.2",
+    "gh-pages": "^1.0.0",
     "jest": "^20.0.4",
     "redux-devtools": "^3.4.0",
     "redux-immutable-state-invariant": "^2.0.0",
