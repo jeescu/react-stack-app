@@ -39,21 +39,11 @@ const enhance = compose(
       }),
     }),
   ),
-  setPropTypes({
-    username: PropTypes.string,
-    password: PropTypes.string,
-    isLoading: PropTypes.bool,
-    handleUsernameChange: PropTypes.func,
-    handlePasswordChange: PropTypes.func,
-    store: PropTypes.object,
-    storeState: PropTypes.object,
-  }),
 );
 
 const LoginPage = ({
   username,
   password,
-  isLoading,
   handleUsernameChange,
   handlePasswordChange,
   store,
@@ -142,6 +132,15 @@ const LoginPage = ({
       </Paper>
     </div>
   );
+};
+
+LoginPage.propTypes = {
+  username: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
+  handleUsernameChange: PropTypes.func.isRequired,
+  handlePasswordChange: PropTypes.func.isRequired,
+  store: PropTypes.object.isRequired,
+  storeState: PropTypes.object.isRequired,
 };
 
 function mapState({ auth }) {
