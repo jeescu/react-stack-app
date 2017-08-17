@@ -33,6 +33,10 @@ const PostForm = enhance(({
   handleSubmit,
 }) => {
   const styles = {
+    paper: {
+      padding: 30,
+      marginBottom: 10,
+    },
     buttons: {
       marginTop: 30,
     },
@@ -47,7 +51,7 @@ const PostForm = enhance(({
   };
 
   return (
-    <Paper style={{ padding: 30 }}>
+    <Paper style={styles.paper}>
       <h3 className="title">Form</h3>
 
       <Divider />

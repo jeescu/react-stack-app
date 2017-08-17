@@ -6,6 +6,10 @@ import { typography } from 'material-ui/styles';
 
 const InfoBox = ({ color, title, value, Icon }) => {
   const styles = {
+    paper: {
+      backgroundColor: color,
+      marginBottom: 10,
+    },
     content: {
       padding: '12px 10px',
       marginLeft: 90,
@@ -38,7 +42,7 @@ const InfoBox = ({ color, title, value, Icon }) => {
   };
 
   return (
-    <Paper style={{ backgroundColor: color }}>
+    <Paper style={styles.paper}>
       <span style={styles.iconSpan}>
         <Icon
           color={white}

@@ -10,6 +10,7 @@ const NewOrders = (props) => {
     paper: {
       backgroundColor: purple500,
       height: 150,
+      marginBottom: 10,
     },
     div: {
       height: 95,

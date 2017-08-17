@@ -9,6 +9,7 @@ const MonthlySales = (props) => {
     paper: {
       backgroundColor: pink600,
       height: 150,
+      marginBottom: 10,
     },
     div: {
       marginLeft: 'auto',
